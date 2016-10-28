@@ -1,0 +1,9 @@
+bind:
+  build: .
+  dockerfile: Dockerfile
+  ports:
+    - "53:53/udp"
+  net: host
+  volumes:
+    - /srv/bind:/data
+  restart: always
