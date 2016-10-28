@@ -7,10 +7,6 @@ ENV DATA_DIR=/data \
 RUN apt-get -qq update
 RUN apt-get -y install python-software-properties bind9 bind9utils
 
-# Create runit services
-#ADD ./config/run_sniproxy /etc/service/sniproxy/run
-#RUN chmod +x /etc/service/sniproxy/run
-
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
